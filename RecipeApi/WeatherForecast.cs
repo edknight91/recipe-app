@@ -12,4 +12,8 @@ namespace RecipeApi
 
         public string Summary { get; set; }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> feature/sk/schema
