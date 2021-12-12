@@ -22,7 +22,6 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
         }
       },
-<<<<<<< HEAD
       "MySqlConnector/2.0.0": {
         "type": "package",
         "compile": {
@@ -32,8 +31,6 @@
           "lib/net5.0/MySqlConnector.dll": {}
         }
       },
-=======
->>>>>>> feature/sk/schema
       "Swashbuckle.AspNetCore/5.6.3": {
         "type": "package",
         "dependencies": {
@@ -135,7 +132,6 @@
         "microsoft.openapi.nuspec"
       ]
     },
-<<<<<<< HEAD
     "MySqlConnector/2.0.0": {
       "sha512": "EY0KXqQas+QvdZQU0NPkqBSfJitWAl8IUCg0v/Qn0P7f/KApJTFJFm8czYWoDPyewUjPHrAnE/cSYzzSFGc8Ng==",
       "type": "package",
@@ -165,8 +161,6 @@
         "mysqlconnector.nuspec"
       ]
     },
-=======
->>>>>>> feature/sk/schema
     "Swashbuckle.AspNetCore/5.6.3": {
       "sha512": "UkL9GU0mfaA+7RwYjEaBFvAzL8qNQhNqAeV5uaWUu/Z+fVgvK9FHkGCpTXBqSQeIHuZaIElzxnLDdIqGzuCnVg==",
       "type": "package",
@@ -233,10 +227,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-<<<<<<< HEAD
       "MySqlConnector >= 2.0.0",
-=======
->>>>>>> feature/sk/schema
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -277,13 +268,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
-<<<<<<< HEAD
           "MySqlConnector": {
             "target": "Package",
             "version": "[2.0.0, )"
           },
-=======
->>>>>>> feature/sk/schema
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[5.6.3, )"
