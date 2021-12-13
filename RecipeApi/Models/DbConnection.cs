@@ -116,7 +116,6 @@ namespace RecipeApi.Models
             return t;
         }
 
-
         public void Dispose() => Connection.Dispose();
     }
 }
