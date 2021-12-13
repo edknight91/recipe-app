@@ -33,7 +33,10 @@
     ".NETCoreApp,Version=v5.0": {
       "RecipeApi/1.0.0": {
         "dependencies": {
+<<<<<<< HEAD
           "MySqlConnector": "2.0.0",
+=======
+>>>>>>> feature/sk/schema
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
@@ -338,6 +341,7 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
         }
       },
+<<<<<<< HEAD
       "MySqlConnector/2.0.0": {
         "runtime": {
           "lib/net5.0/MySqlConnector.dll": {
@@ -349,6 +353,8 @@
           "lib/net5.0/MySqlConnector.dll": {}
         }
       },
+=======
+>>>>>>> feature/sk/schema
       "Swashbuckle.AspNetCore/5.6.3": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
@@ -2116,6 +2122,7 @@
       "path": "microsoft.openapi/1.2.3",
       "hashPath": "microsoft.openapi.1.2.3.nupkg.sha512"
     },
+<<<<<<< HEAD
     "MySqlConnector/2.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2123,6 +2130,8 @@
       "path": "mysqlconnector/2.0.0",
       "hashPath": "mysqlconnector.2.0.0.nupkg.sha512"
     },
+=======
+>>>>>>> feature/sk/schema
     "Swashbuckle.AspNetCore/5.6.3": {
       "type": "package",
       "serviceable": true,

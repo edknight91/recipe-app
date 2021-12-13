@@ -7,7 +7,10 @@
 /Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/bin/Debug/net5.0/ref/RecipeApi.dll
 /Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/bin/Debug/net5.0/RecipeApi.pdb
 /Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/bin/Debug/net5.0/Microsoft.OpenApi.dll
+<<<<<<< HEAD
 /Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/bin/Debug/net5.0/MySqlConnector.dll
+=======
+>>>>>>> feature/sk/schema
 /Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/bin/Debug/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll

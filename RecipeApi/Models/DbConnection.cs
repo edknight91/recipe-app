@@ -5,7 +5,8 @@ namespace RecipeApi.Models
     using MySqlConnector;
     public class DbConnection : IDisposable
     {
-        private const string CONNECTION_STRING = "Server=127.0.0.1;Database=recipeapi;Uid=root;Pwd=Developer!;";
+        // Change password to your password in MySql!
+        private const string CONNECTION_STRING = "Server=127.0.0.1;Database=recipeapi;Uid=root;Pwd=Developer1;";
 
         public MySqlConnection Connection { get; }
 
@@ -31,27 +32,88 @@ namespace RecipeApi.Models
             return t;
         }
 
-        public void CreateRecipe(string title, string method)
+        public DataTable GetAllMeals()
         {
             MySqlCommand command = this.Connection.CreateCommand();
-            command.CommandText = "INSERT INTO recipe (title, method) VALUES (@title, @method);";
+            command.CommandText = "SELECT * FROM meals;";
+            //            command.Exec
 
-            command.Parameters.Add(new MySqlParameter("@title", title));
-            command.Parameters.Add(new MySqlParameter("@method", method));
+            DataTable t = new DataTable();
 
-            command.ExecuteNonQuery();
+            MySqlDataAdapter x = new MySqlDataAdapter(command);
+            x.Fill(t);
 
+            return t;
         }
 
-        public void UpdateRecipe(string title, string method)
+        public DataTable GetAllIngredients()
         {
             MySqlCommand command = this.Connection.CreateCommand();
-            command.CommandText = "UPDATE recipe SET title = @title, method = @method";
+            command.CommandText = "SELECT * FROM ingredient;";
+            //            command.Exec
 
-            command.Parameters.Add(new MySqlParameter("@title", title));
-            command.Parameters.Add(new MySqlParameter("@method", method));
+            DataTable t = new DataTable();
 
-            command.ExecuteNonQuery();
+            MySqlDataAdapter x = new MySqlDataAdapter(command);
+            x.Fill(t);
+
+            return t;
+        }
+
+        public DataTable GetAllRecipeIngredients()
+        {
+            MySqlCommand command = this.Connection.CreateCommand();
+            command.CommandText = "SELECT * FROM recipe_ingredient;";
+            //            command.Exec
+
+            DataTable t = new DataTable();
+
+            MySqlDataAdapter x = new MySqlDataAdapter(command);
+            x.Fill(t);
+
+            return t;
+        }
+
+        public DataTable GetAllShoplistMeals()
+        {
+            MySqlCommand command = this.Connection.CreateCommand();
+            command.CommandText = "SELECT * FROM shoplist_meal_id;";
+            //            command.Exec
+
+            DataTable t = new DataTable();
+
+            MySqlDataAdapter x = new MySqlDataAdapter(command);
+            x.Fill(t);
+
+            return t;
+        }
+
+        public DataTable GetAllShoplists()
+        {
+            MySqlCommand command = this.Connection.CreateCommand();
+            command.CommandText = "SELECT * FROM shoplist;";
+            //            command.Exec
+
+            DataTable t = new DataTable();
+
+            MySqlDataAdapter x = new MySqlDataAdapter(command);
+            x.Fill(t);
+
+            return t;
+        }
+
+        public DataTable GetAllSiteUsers()
+        {
+            MySqlCommand command = this.Connection.CreateCommand();
+            command.CommandText = "SELECT * FROM site_user;";
+            //            command.Exec
+
+            DataTable t = new DataTable();
+
+            MySqlDataAdapter x = new MySqlDataAdapter(command);
+            x.Fill(t);
+
+            return t;
         }
 
 
