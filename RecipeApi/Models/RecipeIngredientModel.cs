@@ -7,9 +7,7 @@ namespace RecipeApi.Models
     public class RecipeIngredientModel
     {
         public int recipeIngredientId { get; set; }
-
         public int recipeId { get; set; }
-
         public int ingredientId { get; set; }
         public int quantity { get; set; }
 
@@ -19,7 +17,7 @@ namespace RecipeApi.Models
 
             List<RecipeIngredientModel> models = new List<RecipeIngredientModel>();
 
-            foreach(DataRow r in data.Rows)
+            foreach (DataRow r in data.Rows)
             {
                 models.Add(new RecipeIngredientModel
                 {
