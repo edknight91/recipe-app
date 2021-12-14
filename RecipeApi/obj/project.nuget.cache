@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "gvdvEhuO5jpVhpxKPbetpnwpzE9G2LD6GM+qyll/i63QSChTV/ba480zN3lHs4DTF1QmpkUAo+gp76dHyMD/og==",
+  "dgSpecHash": "CXI5NYijE/CSVGPhNaX8lHEjT3ng9em53tfZcjOVkP9zCOqs/hjY9nKbsh9UvFArIm0XyCxjy64z6OkecVS+dQ==",
   "success": true,
-  "projectFilePath": "/Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/RecipeApi.csproj",
+  "projectFilePath": "/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/RecipeApi.csproj",
   "expectedPackageFiles": [
-    "/Users/webreality/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "/Users/webreality/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
-    "/Users/webreality/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-    "/Users/webreality/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "/Users/webreality/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "/Users/webreality/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+    "/Users/helenallenet/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/helenallenet/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/helenallenet/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/helenallenet/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/helenallenet/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/helenallenet/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
   ],
   "logs": []
 }

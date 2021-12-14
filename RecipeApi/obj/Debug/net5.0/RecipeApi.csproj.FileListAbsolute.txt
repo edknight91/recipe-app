@@ -26,3 +26,13 @@
 /Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/obj/Debug/net5.0/ref/RecipeApi.dll
 /Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/obj/Debug/net5.0/RecipeApi.pdb
 /Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/obj/Debug/net5.0/RecipeApi.genruntimeconfig.cache
+/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/obj/Debug/net5.0/RecipeApi.csproj.AssemblyReference.cache
+/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/obj/Debug/net5.0/RecipeApi.GeneratedMSBuildEditorConfig.editorconfig
+/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/obj/Debug/net5.0/RecipeApi.AssemblyInfoInputs.cache
+/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/obj/Debug/net5.0/RecipeApi.AssemblyInfo.cs
+/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/obj/Debug/net5.0/RecipeApi.csproj.CoreCompileInputs.cache
+/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/obj/Debug/net5.0/RecipeApi.MvcApplicationPartsAssemblyInfo.cs
+/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/obj/Debug/net5.0/RecipeApi.MvcApplicationPartsAssemblyInfo.cache
+/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/obj/Debug/net5.0/RecipeApi.dll
+/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/obj/Debug/net5.0/ref/RecipeApi.dll
+/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/obj/Debug/net5.0/RecipeApi.pdb

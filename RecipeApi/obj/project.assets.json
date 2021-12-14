@@ -193,19 +193,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/webreality/.nuget/packages/": {}
+    "/Users/helenallenet/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/RecipeApi.csproj",
+      "projectUniqueName": "/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/RecipeApi.csproj",
       "projectName": "RecipeApi",
-      "projectPath": "/Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/RecipeApi.csproj",
-      "packagesPath": "/Users/webreality/.nuget/packages/",
-      "outputPath": "/Users/webreality/Desktop/digital-jersey-course/recipe-app/RecipeApi/obj/",
+      "projectPath": "/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/RecipeApi.csproj",
+      "packagesPath": "/Users/helenallenet/.nuget/packages/",
+      "outputPath": "/Users/helenallenet/Documents/HARepos/HA1/recipe-app/RecipeApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/webreality/.nuget/NuGet/NuGet.Config"
+        "/Users/helenallenet/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
