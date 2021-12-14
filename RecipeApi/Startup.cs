@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using RecipeApi.Models;
+
 
 namespace RecipeApi
 {
@@ -28,6 +30,8 @@ namespace RecipeApi
         {
 
             services.AddControllers();
+            services.AddTransient<DbConnection>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "RecipeApi", Version = "v1" });

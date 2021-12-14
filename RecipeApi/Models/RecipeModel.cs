@@ -12,6 +12,8 @@ namespace RecipeApi.Models
 
         public string method { get; set; }
 
+        // TODO: List of ingredients here
+
         public static List<RecipeModel> GetAll()
         {
             DataTable data = DbConnection.Current.GetAllRecipes();
@@ -26,6 +28,8 @@ namespace RecipeApi.Models
                     title = Convert.ToString(r["title"]),
                     method = Convert.ToString(r["method"])
                 });
+
+                // TODO: For now, load the recipe ingredient list here and add to each model
             }
 
             return models;
