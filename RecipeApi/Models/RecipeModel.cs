@@ -14,19 +14,11 @@ namespace RecipeApi.Models
 
         public static List<RecipeModel> GetAll()
         {
-<<<<<<< HEAD
             DataTable data = DbConnection.Current.GetAllRecipes();
 
             List<RecipeModel> models = new List<RecipeModel>();
 
             foreach (DataRow r in data.Rows)
-=======
-            DataTable data = DbConnection.Current.GetAllProducts();
-
-            List<RecipeModel> models = new List<RecipeModel>();
-
-            foreach(DataRow r in data.Rows)
->>>>>>> 36b0079e65f263d51c966420d49821a817d5b647
             {
                 models.Add(new RecipeModel
                 {

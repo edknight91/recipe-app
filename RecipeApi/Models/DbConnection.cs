@@ -6,11 +6,7 @@ namespace RecipeApi.Models
     public class DbConnection : IDisposable
     {
         // Change password to your password in MySql!
-<<<<<<< HEAD
         private const string CONNECTION_STRING = "Server=127.0.0.1;Database=recipeapi;Uid=root;Pwd=Developer1;";
-=======
-        private const string CONNECTION_STRING = "Server=127.0.0.1;Database=recipeapi;Uid=root;Pwd=Coders!23;";
->>>>>>> 36b0079e65f263d51c966420d49821a817d5b647
 
         public MySqlConnection Connection { get; }
 
@@ -110,6 +106,23 @@ namespace RecipeApi.Models
         {
             MySqlCommand command = this.Connection.CreateCommand();
             command.CommandText = "SELECT * FROM site_user;";
+            //            command.Exec
+
+            DataTable t = new DataTable();
+
+            MySqlDataAdapter x = new MySqlDataAdapter(command);
+            x.Fill(t);
+
+            return t;
+        }
+
+         public DataTable GetRecipeById(int RecipeId)
+        {
+            MySqlCommand command = this.Connection.CreateCommand();
+            command.CommandText = "SELECT * FROM recipe_ingredient WHERE recipe_id=@RecipeId;";
+            
+            command.Parameters.AddWithValue("@RecipeId", RecipeId);
+            
             //            command.Exec
 
             DataTable t = new DataTable();
