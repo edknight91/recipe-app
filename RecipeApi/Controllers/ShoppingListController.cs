@@ -5,11 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using RecipeApi.Model;
+using RecipeApi.Models;
 
 namespace RecipeApi.Controllers
- {
- public class ShoppingListController : Controller
+{
+    public class ShoppingListController : Controller
     {
         private readonly ILogger<ShoppingListController> _logger;
 
@@ -19,11 +19,12 @@ namespace RecipeApi.Controllers
             DbConnection.Current = connection;
         }
 
+        [HttpGet("/shoppinglist")]
         public IActionResult Index()
         {
-            return Json();
+            return Json(1);
         }
 
 
     }
-}       
+}

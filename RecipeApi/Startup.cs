@@ -11,13 +11,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using RecipeApi.Models;
 
 namespace RecipeApi
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration, IWebHostEnvironment env)
+        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
@@ -28,8 +27,6 @@ namespace RecipeApi
         public void ConfigureServices(IServiceCollection services)
         {
 
-            //services.AddControllersWithViews();
-            services.AddTransient<DbConnection>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

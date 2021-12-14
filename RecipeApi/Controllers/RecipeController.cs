@@ -5,11 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using RecipeApi.Model;
+using RecipeApi.Models;
 
 namespace RecipeApi.Controllers
- {
- public class RecipeController : Controller
+{
+    public class RecipeController : Controller
     {
         private readonly ILogger<RecipeController> _logger;
 
@@ -19,14 +19,16 @@ namespace RecipeApi.Controllers
             DbConnection.Current = connection;
         }
 
+        [HttpGet("/recipes")]
         public IActionResult Search(string keyword)
         {
-            return Json();
+            return Json(1);
         }
 
+        [HttpGet("/recipes/{id}")]
         public IActionResult Get(string id)
         {
-            return Json();
+            return Json(1);
         }
           
         [HttpGet]
