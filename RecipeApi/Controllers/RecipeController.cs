@@ -29,5 +29,12 @@ namespace RecipeApi.Controllers
             return Json();
         }
           
+        [HttpGet]
+          public IActionResult GetRecipeById(string id) 
+        {
+            RecipeModel model = RecipeModel.Get(Convert.ToInt32(id));
+
+            return Json(model);
+        }   
     }    
  }    
