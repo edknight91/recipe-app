@@ -6,7 +6,11 @@ namespace RecipeApi.Models
     public class DbConnection : IDisposable
     {
         // Change password to your password in MySql!
+<<<<<<< HEAD
         private const string CONNECTION_STRING = "Server=127.0.0.1;Database=recipeapi;Uid=root;Pwd=Developer1;";
+=======
+        private const string CONNECTION_STRING = "Server=127.0.0.1;Database=recipeapi;Uid=root;Pwd=Coders!23;";
+>>>>>>> 36b0079e65f263d51c966420d49821a817d5b647
 
         public MySqlConnection Connection { get; }
 

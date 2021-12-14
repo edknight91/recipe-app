@@ -14,13 +14,19 @@ namespace RecipeApi.Models
         public int algnCrust { get; set; }
         public int algnEggs { get; set; }
         public int algnFish { get; set; }
+<<<<<<< HEAD
         public int algnLupin { get; set; }
+=======
+>>>>>>> 36b0079e65f263d51c966420d49821a817d5b647
         public int algnMilk { get; set; }
         public int algnMollusc { get; set; }
         public int algnMustard { get; set; }
         public int algnPeanut { get; set; }
         public int algnSesame { get; set; }
+<<<<<<< HEAD
         public int algnSoya { get; set; }
+=======
+>>>>>>> 36b0079e65f263d51c966420d49821a817d5b647
         public int algnSulphite { get; set; }
         public int algnTreenut { get; set; }
         public int vegetarian { get; set; }
@@ -33,7 +39,11 @@ namespace RecipeApi.Models
 
             List<IngredientModel> models = new List<IngredientModel>();
 
+<<<<<<< HEAD
             foreach (DataRow r in data.Rows)
+=======
+            foreach(DataRow r in data.Rows)
+>>>>>>> 36b0079e65f263d51c966420d49821a817d5b647
             {
                 models.Add(new IngredientModel
                 {
@@ -62,4 +72,8 @@ namespace RecipeApi.Models
             return models;
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 36b0079e65f263d51c966420d49821a817d5b647
