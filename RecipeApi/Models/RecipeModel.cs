@@ -30,5 +30,17 @@ namespace RecipeApi.Models
 
             return models;
         }
+
+        public static RecipeModel Get(int id)
+        {
+            List<RecipeModel> allRecipe = new List<RecipeModel>(GetAll());
+
+            foreach (RecipeModel r in allRecipe)
+            {
+                if (r.recipeId == id)
+                    return r;
+            }
+            return null;
+        }
     }
 }
