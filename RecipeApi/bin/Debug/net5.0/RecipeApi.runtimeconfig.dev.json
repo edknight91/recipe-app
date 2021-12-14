@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "/Users/webreality/.dotnet/store/|arch|/|tfm|",
-      "/Users/webreality/.nuget/packages"
-    ]
-  }
-}
