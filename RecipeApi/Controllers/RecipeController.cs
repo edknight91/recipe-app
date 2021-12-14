@@ -28,15 +28,9 @@ namespace RecipeApi.Controllers
         [HttpGet("/recipes/{id}")]
         public IActionResult Get(string id)
         {
-            return Json(1);
-        }
-          
-        [HttpGet]
-          public IActionResult GetRecipeById(string id) 
-        {
             RecipeModel model = RecipeModel.Get(Convert.ToInt32(id));
 
             return Json(model);
-        }   
-    }    
- }    
+        }
+    }
+}
