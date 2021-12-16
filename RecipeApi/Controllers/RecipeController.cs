@@ -22,15 +22,18 @@ namespace RecipeApi.Controllers
         [HttpGet("/recipes")]
         public IActionResult Search(string keyword)
         {
-            return Json(1);
+            List<RecipeModel> recipes = RecipeModel.GetAll();
+            return Json(recipes);
         }
 
         [HttpGet("/recipes/{id}")]
         public IActionResult Get(string id)
         {
-            RecipeModel model = RecipeModel.Get(Convert.ToInt32(id));
+            int recipeId = Convert.ToInt32(id);
 
-            return Json(model);
+            RecipeModel recipe = RecipeModel.Get(recipeId);
+
+            return Json(recipe);
         }
     }
 }

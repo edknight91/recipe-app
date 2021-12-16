@@ -6,7 +6,7 @@ namespace RecipeApi.Models
     public class DbConnection : IDisposable
     {
         // Change password to your password in MySql!
-        private const string CONNECTION_STRING = "Server=127.0.0.1;Database=recipeapi;Uid=root;Pwd=Coders!23;";
+        private const string CONNECTION_STRING = "Server=127.0.0.1;Database=recipeapi;Uid=root;Pwd=Developer!;";
 
         public MySqlConnection Connection { get; }
 
@@ -116,13 +116,30 @@ namespace RecipeApi.Models
             return t;
         }
 
-         public DataTable GetRecipeById(int RecipeId)
+        public DataTable GetRecipeById(int recipeId)
         {
             MySqlCommand command = this.Connection.CreateCommand();
-            command.CommandText = "SELECT * FROM recipe_ingredient WHERE recipe_id=@RecipeId;";
-            
-            command.Parameters.AddWithValue("@RecipeId", RecipeId);
-            
+            command.CommandText = "SELECT * FROM recipe WHERE recipe_id=@RecipeId;";
+
+            command.Parameters.AddWithValue("@RecipeId", recipeId);
+
+            //            command.Exec
+
+            DataTable t = new DataTable();
+
+            MySqlDataAdapter x = new MySqlDataAdapter(command);
+            x.Fill(t);
+
+            return t;
+        }
+
+        public DataTable GetIngredientByRecipeId(int recipeId)
+        {
+            MySqlCommand command = this.Connection.CreateCommand();
+            command.CommandText = "SELECT i.*, ri.quantity FROM ingredient i INNER JOIN recipe_ingredient ri ON ri.ingredient_id = i.ingredient_id WHERE ri.recipe_id = @RecipeId;";
+
+            command.Parameters.AddWithValue("@RecipeId", recipeId);
+
             //            command.Exec
 
             DataTable t = new DataTable();

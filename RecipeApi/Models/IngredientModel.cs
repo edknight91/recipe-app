@@ -8,58 +8,74 @@ namespace RecipeApi.Models
     {
         public int ingredientId { get; set; }
         public string title { get; set; }
-        public int wet { get; set; }
-        public int algnCelery { get; set; }
-        public int algnGluten { get; set; }
-        public int algnCrust { get; set; }
-        public int algnEggs { get; set; }
-        public int algnFish { get; set; }
-        public int algnLupin { get; set; }
-        public int algnMilk { get; set; }
-        public int algnMollusc { get; set; }
-        public int algnMustard { get; set; }
-        public int algnPeanut { get; set; }
-        public int algnSesame { get; set; }
-        public int algnSoya { get; set; }
-        public int algnSulphite { get; set; }
-        public int algnTreenut { get; set; }
-        public int vegetarian { get; set; }
-        public int vegan { get; set; }
-
+        public bool wet { get; set; }
+        public bool algnCelery { get; set; }
+        public bool algnGluten { get; set; }
+        public bool algnCrust { get; set; }
+        public bool algnEggs { get; set; }
+        public bool algnFish { get; set; }
+        public bool algnLupin { get; set; }
+        public bool algnMilk { get; set; }
+        public bool algnMollusc { get; set; }
+        public bool algnMustard { get; set; }
+        public bool algnPeanut { get; set; }
+        public bool algnSesame { get; set; }
+        public bool algnSoya { get; set; }
+        public bool algnSulphite { get; set; }
+        public bool algnTreenut { get; set; }
+        public bool vegetarian { get; set; }
+        public bool vegan { get; set; }
+        public int Quantity { get; set; }
 
         public static List<IngredientModel> GetAll()
         {
             DataTable data = DbConnection.Current.GetAllIngredients();
 
+            return IngredientModel.FromDataTable(data);
+        }
+
+        public static List<IngredientModel> GetForRecipe(int recipeId)
+        {
+            DataTable data = DbConnection.Current.GetIngredientByRecipeId(recipeId);
+
+            return IngredientModel.FromDataTable(data);
+        }
+
+
+        public static List<IngredientModel> FromDataTable(DataTable table)
+        {
             List<IngredientModel> models = new List<IngredientModel>();
 
-            foreach (DataRow r in data.Rows)
+            foreach (DataRow r in table.Rows)
             {
                 models.Add(new IngredientModel
                 {
                     ingredientId = Convert.ToInt32(r["ingredient_id"]),
                     title = Convert.ToString(r["title"]),
-                    wet = Convert.ToInt32(r["wet"]),
-                    algnCelery = Convert.ToInt32(r["algn_celery"]),
-                    algnGluten = Convert.ToInt32(r["algn_gluten"]),
-                    algnCrust = Convert.ToInt32(r["algn_crust"]),
-                    algnEggs = Convert.ToInt32(r["algn_eggs"]),
-                    algnFish = Convert.ToInt32(r["algn_fish"]),
-                    algnLupin = Convert.ToInt32(r["algn_lupin"]),
-                    algnMilk = Convert.ToInt32(r["algn_milk"]),
-                    algnMollusc = Convert.ToInt32(r["algn_mollusc"]),
-                    algnMustard = Convert.ToInt32(r["algn_mustard"]),
-                    algnPeanut = Convert.ToInt32(r["algn_peanut"]),
-                    algnSesame = Convert.ToInt32(r["algn_sesame"]),
-                    algnSoya = Convert.ToInt32(r["algn_soya"]),
-                    algnSulphite = Convert.ToInt32(r["algn_sulphite"]),
-                    algnTreenut = Convert.ToInt32(r["algn_treenut"]),
-                    vegetarian = Convert.ToInt32(r["vegetarian"]),
-                    vegan = Convert.ToInt32(r["vegan"])
+                    wet = Convert.ToBoolean(r["wet"]),
+                    algnCelery = Convert.ToBoolean(r["algn_celery"]),
+                    algnGluten = Convert.ToBoolean(r["algn_gluten"]),
+                    algnCrust = Convert.ToBoolean(r["algn_crust"]),
+                    algnEggs = Convert.ToBoolean(r["algn_eggs"]),
+                    algnFish = Convert.ToBoolean(r["algn_fish"]),
+                    algnLupin = Convert.ToBoolean(r["algn_lupin"]),
+                    algnMilk = Convert.ToBoolean(r["algn_milk"]),
+                    algnMollusc = Convert.ToBoolean(r["algn_mollusc"]),
+                    algnMustard = Convert.ToBoolean(r["algn_mustard"]),
+                    algnPeanut = Convert.ToBoolean(r["algn_peanut"]),
+                    algnSesame = Convert.ToBoolean(r["algn_sesame"]),
+                    algnSoya = Convert.ToBoolean(r["algn_soya"]),
+                    algnSulphite = Convert.ToBoolean(r["algn_sulphite"]),
+                    algnTreenut = Convert.ToBoolean(r["algn_treenut"]),
+                    vegetarian = Convert.ToBoolean(r["vegetarian"]),
+                    vegan = Convert.ToBoolean(r["vegan"]),
+                    Quantity = Convert.ToInt32(r["quantity"])
                 });
             }
 
             return models;
         }
+
+
     }
 }

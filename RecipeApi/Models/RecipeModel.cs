@@ -12,7 +12,7 @@ namespace RecipeApi.Models
 
         public string method { get; set; }
 
-        // TODO: List of ingredients here
+        public List<IngredientModel> Ingredients { get; set; }
 
         public static List<RecipeModel> GetAll()
         {
@@ -35,16 +35,69 @@ namespace RecipeApi.Models
             return models;
         }
 
+        public static List<IngredientModel> GetIngredients(int recipeId)
+        {
+            DataTable data = DbConnection.Current.GetIngredientByRecipeId(recipeId);
+
+            List<IngredientModel> models = new List<IngredientModel>();
+
+            foreach (DataRow i in data.Rows)
+            {
+                models.Add(new IngredientModel
+                {
+                    ingredientId = Convert.ToInt32(i["ingredient_id"]),
+                    title = Convert.ToString(i["title"])
+                });
+
+                // TODO: For now, load the recipe ingredient list here and add to each model
+            }
+
+            return models;
+        }
+
         public static RecipeModel Get(int id)
         {
-            List<RecipeModel> allRecipe = new List<RecipeModel>(GetAll());
+            // List<RecipeModel> allRecipe = new List<RecipeModel>(GetAll());
+            DataTable table = DbConnection.Current.GetRecipeById(id);
 
-            foreach (RecipeModel r in allRecipe)
+            if (table == null || table.Rows.Count == 0) return null;
+
+            DataRow row = table.Rows[0];
+
+            int recipeId = Convert.ToInt32(row["recipe_id"]);
+
+            RecipeModel recipe = new RecipeModel
             {
-                if (r.recipeId == id)
-                    return r;
-            }
-            return null;
+                recipeId = recipeId,
+                title = Convert.ToString(row["title"]),
+                method = Convert.ToString(row["method"]),
+                Ingredients = IngredientModel.GetForRecipe(recipeId)
+            };
+
+            return recipe;
+
+            // foreach (RecipeModel r in allRecipe)
+            // {
+            //     if (r.recipeId == id)
+            //         return r;
+            // }
+
+            // DataTable ingredients = DbConnection.Current.GetIngredientByRecipeId(id);
+
+            // foreach (DataRow i in ingredients.Rows)
+            // {
+            //     ingredients.Add(new RecipeModel()
+            //     {
+            //         ingredientId = Convert.ToInt32(i["ingredient_id"]),
+            //         title = Convert.ToString(i["title"])
+            //     });
+
+            //     // TODO: For now, load the recipe ingredient list here and add to each model
+            // }
+
+            // return models;
+
+            // return null;
         }
     }
 }
