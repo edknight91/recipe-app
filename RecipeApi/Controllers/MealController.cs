@@ -20,11 +20,25 @@ namespace RecipeApi.Controllers
         }
 
         [HttpGet("/meals")]
-        public IActionResult Index()
+        public IActionResult GetMeals()
         {
+            return Json(1);
+        }
+
+        [HttpPost("/meals/delete")]
+        public IActionResult DeleteMeals()
+        {
+            return Json(1);
+        }
+
+        [HttpPost("/meals/add")]
+        public IActionResult AddMeals(string id)
+        {
+            int recipeId = Convert.ToInt32(id);
 
             return Json(1);
         }
+
     }
 
 }

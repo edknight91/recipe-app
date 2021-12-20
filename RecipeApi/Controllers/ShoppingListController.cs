@@ -25,6 +25,5 @@ namespace RecipeApi.Controllers
             return Json(1);
         }
 
-
     }
 }
