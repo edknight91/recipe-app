@@ -150,6 +150,23 @@ namespace RecipeApi.Models
             return t;
         }
 
+        public DataTable GetMealsByUserId(int siteUserId)
+        {
+            MySqlCommand command = this.Connection.CreateCommand();
+            command.CommandText = "SELECT meal.meal_id, meal.recipe_id, recipe.title FROM meal INNER JOIN recipe ON meal.recipe_id = recipe.recipe_id WHERE meal.site_user_id = @siteUserId;";
+
+            command.Parameters.AddWithValue("@SiteUserId", siteUserId);
+
+            //            command.Exec
+
+            DataTable t = new DataTable();
+
+            MySqlDataAdapter x = new MySqlDataAdapter(command);
+            x.Fill(t);
+
+            return t;
+        }
+
         public void Dispose() => Connection.Dispose();
     }
 }

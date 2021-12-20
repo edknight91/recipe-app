@@ -20,9 +20,11 @@ namespace RecipeApi.Controllers
         }
 
         [HttpGet("/meals")]
-        public IActionResult GetMeals()
+        public IActionResult GetMeals(string id)
         {
-            return Json(1);
+            int userId = Convert.ToInt32(id);
+            List<MealModel> meals = MealModel.GetMeals(userId);
+            return Json(meals);
         }
 
         [HttpPost("/meals/delete")]
